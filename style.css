@@ -124,15 +124,16 @@ nav {
     transition: all 0.5s;
     -webkit-text-stroke: 2px #d6f4f4;
     font-variation-settings: "wght" 900, "ital" 1;
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: center;
     color: transparent;
     font-family: "Meta", sans-serif;
     text-shadow: 10px 10px 0px #07bccc,
       15px 15px 0px #e601c0,
       20px 20px 0px #e9019a,
-      25px 25px 0px #f40468,
-      45px 45px 10px #482896;
+      25px 25px 0px #f40468;
+      /* 45px 45px 10px #482896; */
+    margin-top: 4px;
     cursor: pointer;
    
 
@@ -216,7 +217,7 @@ nav {
   }
 
   .content img {
-    width: 50px;
+    width: 40px;
     float: right;
   }
   .content img:hover {
@@ -437,18 +438,21 @@ footer a:hover {
     transition: all 0.5s;
     -webkit-text-stroke: 2px #d6f4f4;
     font-variation-settings: "wght" 900, "ital" 1;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     color: transparent;
     font-family: "Meta", sans-serif;
     text-shadow: 10px 10px 0px #07bccc,
         15px 15px 0px #e601c0,
         20px 20px 0px #e9019a,
-        25px 25px 0px #f40468,
-        45px 45px 10px #482896;
+        25px 25px 0px #f40468;
+        /* 45px 45px 10px #482896; */
+        margin-top: 2px;
     cursor: pointer;
+}
 
-
+#containerAboutMe h1 {
+    font-size: 1.5em;
 }
 
 @media all and (max-width: 700px) {
@@ -474,7 +478,7 @@ footer a:hover {
     width: 376px;
 }
 #contact .icon{
-    margin-left: 157px;
+    margin-left: 134px;
 }
 .menu li::before {
     content: "";
@@ -486,8 +490,12 @@ footer a:hover {
     bottom: -12px;
     transition: 0.4s ease-out;
 }
+footer p,
+a {
+    font-size: 12px;
 }
-/* @media all and (max-width: 428px){
+}
+@media all and (max-width: 428px){
     .project {
             height: 350px;
         }
@@ -497,5 +505,18 @@ footer a:hover {
             transform: translateY(-180px);
         }
 }
-} */
+header {
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding: 0 2rem;
+    color: #fff;
+    z-index: 100;
+}
+footer p, a {
+    font-size: 12px;
+}
 }
