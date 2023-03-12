@@ -239,17 +239,6 @@ nav {
     
   }
   
-/* #skillSet {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-    grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
-    padding: 60px 180px;
-    background-color: #5398BE;
-    height: 100vh;
-    
-} */
 img {
     max-width: 100%;
     display: block;
@@ -277,17 +266,23 @@ img {
     margin-top: 16px;
 }
 
-/* .container-carrosuel {
-    border: 1px solid green;
-    width: fit-content;
-} */
+@keyframes sl {
+    0% { margin-left: 0px; top: 0px;}
+    100% {margin-left: calc(100% - 1800px); top: 0px;}
+}
 
- .carrusel-items {
+.carrusel-items {
     display: flex;
     align-items: center;
     overflow-x: scroll;
     overflow-x: hidden;
- } 
+}
+
+@media all and (max-width: 1800px) {
+    .carrusel-items {
+        animation: sl 10s linear 2s infinite alternate;
+    }
+}
 
  .carousel-item {
      min-width: 300px;
@@ -300,24 +295,11 @@ img {
     object-fit: cover;
 }
 
-/* #skillSet img {
-    width: 150px;
-    height: 150px;
-}
-
-#skillSet .logoCss {
-    width: 120px;
-
-} */
-
-
-
 #contact {
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
-    /* padding: 60px 180px; */
     padding: 53px 7px;
     background-color: #F2CD5D;
     height: 100vh;
@@ -332,7 +314,6 @@ img {
     margin-left: 10px;
 }
 #contact .icon {
-    /* margin-left: 90px; */
     margin-left: 207px;
 }
 button {
@@ -381,7 +362,7 @@ footer a:hover {
 }
 .footerP {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -452,6 +433,23 @@ footer a:hover {
     height: auto;
     width: 100%;
 }
+.wordS1 {
+    transition: all 0.5s;
+    -webkit-text-stroke: 2px #d6f4f4;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: 1.2rem;
+    text-align: center;
+    color: transparent;
+    font-family: "Meta", sans-serif;
+    text-shadow: 10px 10px 0px #07bccc,
+        15px 15px 0px #e601c0,
+        20px 20px 0px #e9019a,
+        25px 25px 0px #f40468,
+        45px 45px 10px #482896;
+    cursor: pointer;
+
+
+}
 
 @media all and (max-width: 700px) {
     .wordS {
@@ -489,7 +487,7 @@ footer a:hover {
     transition: 0.4s ease-out;
 }
 }
-@media all and (max-width: 428px){
+/* @media all and (max-width: 428px){
     .project {
             height: 350px;
         }
@@ -499,4 +497,5 @@ footer a:hover {
             transform: translateY(-180px);
         }
 }
+} */
 }
